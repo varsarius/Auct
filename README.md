@@ -50,7 +50,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    dotnet run
    ```
-   The app will be available at `https://localhost:5001` by default.
+   The app will be available at `https://localhost:5156` by default.
 
 ## Project Structure
 
