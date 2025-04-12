@@ -1,0 +1,22 @@
+﻿@model IEnumerable<auct.Models.TaskItem>
+
+@{
+    ViewData["Title"] = "Home";
+}
+<h1>Tasks</h1>
+
+<form asp-action="Index" method="post">
+    <input type="text"
+           name="name"
+           placeholder="Enter task…"
+           required />
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+@foreach (var t in Model)
+{
+    <li>@t.Name</li>
+}
+</ul>
+
