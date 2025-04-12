@@ -31,4 +31,48 @@ public class HomeController : Controller
         }
         return RedirectToAction(nameof(Index));
     }
+
+    // POST: /Home/Delete/5
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int id)
+    {
+        var task = _db.Tasks.Find(id);
+        if (task != null)
+        {
+            _db.Tasks.Remove(task);
+            _db.SaveChanges();
+        }
+        return RedirectToAction(nameof(Index));
+    }
+
+    // GET: Home/Edit/5
+    public IActionResult Edit(int id)
+    {
+        var task = _db.Tasks.FirstOrDefault(t => t.Id == id);
+        if (task == null)
+        {
+            return NotFound();
+        }
+        return View(task);
+    }
+
+    // POST: Home/Edit/5
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Edit(int id, TaskItem taskItem)
+    {
+        if (id != taskItem.Id)
+        {
+            return NotFound();
+        }
+
+        if (ModelState.IsValid)
+        {
+            _db.Update(taskItem);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+        return View(taskItem);
+    }
 }

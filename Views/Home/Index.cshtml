@@ -16,7 +16,19 @@
 <ul>
 @foreach (var t in Model)
 {
-    <li>@t.Name</li>
+    <li>
+        @t.Name
+
+        <form asp-action="Delete"
+              asp-route-id="@t.Id"
+              method="post"
+              style="display:inline">
+            <button type="submit">
+                Delete
+            </button>
+        </form>
+        <a asp-action="Edit" asp-route-id="@t.Id" style="display:inline">Edit</a>
+    </li>
 }
 </ul>
 

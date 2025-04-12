@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using auct.Models;
 
 namespace auct.Data   // ← Make sure this matches your project’s root namespace (e.g. if your project is called "auct")
@@ -15,4 +16,14 @@ namespace auct.Data   // ← Make sure this matches your project’s root namesp
         // 2) Add one DbSet<T> per entity/table you want:
         //    public DbSet<YourEntity> YourEntities { get; set; }
     }
+
+     public class ApplicationDbContext : IdentityDbContext
+      {
+          public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+              : base(options)
+          {
+          }
+
+          // Define DbSet properties for your entities here
+      }
 }

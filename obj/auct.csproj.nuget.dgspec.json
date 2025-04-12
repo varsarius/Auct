@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mihailpancenco/Desktop/individual_work/auct/auct.csproj": {}
+    "/Users/mihailpancenco/Desktop/individual_work/Auct/auct.csproj": {}
   },
   "projects": {
-    "/Users/mihailpancenco/Desktop/individual_work/auct/auct.csproj": {
+    "/Users/mihailpancenco/Desktop/individual_work/Auct/auct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mihailpancenco/Desktop/individual_work/auct/auct.csproj",
+        "projectUniqueName": "/Users/mihailpancenco/Desktop/individual_work/Auct/auct.csproj",
         "projectName": "auct",
-        "projectPath": "/Users/mihailpancenco/Desktop/individual_work/auct/auct.csproj",
+        "projectPath": "/Users/mihailpancenco/Desktop/individual_work/Auct/auct.csproj",
         "packagesPath": "/Users/mihailpancenco/.nuget/packages/",
-        "outputPath": "/Users/mihailpancenco/Desktop/individual_work/auct/obj/",
+        "outputPath": "/Users/mihailpancenco/Desktop/individual_work/Auct/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mihailpancenco/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
